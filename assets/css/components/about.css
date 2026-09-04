@@ -1,0 +1,169 @@
+/*==================================
+ABOUT SECTION
+==================================*/
+
+.about{
+    padding-top:120px;
+
+}
+.section-heading{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+.section-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 22px;
+    border-radius:999px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.82rem;
+    margin-bottom:30px;
+
+}
+
+.section-title{
+    font-family:var(--heading);
+    font-size:clamp(2.6rem,6vw,4.4rem);
+    line-height:1.1;
+    margin-bottom:30px;
+
+}
+
+.section-title span{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--accent)
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.section-description{
+    max-width:700px;
+    margin:auto;
+    color:var(--text-light);
+    font-size:1.1rem;
+    line-height:1.9;
+
+}
+/*=========================
+MY JOURNEY
+=========================*/
+
+.journey{
+margin-top:140px;
+
+}
+
+.journey__header{
+max-width:700px;
+margin:auto;
+text-align:center;
+margin-bottom:80px;
+
+}
+
+.journey__header h3{
+font-family:var(--heading);
+font-size:2.8rem;
+margin-bottom:20px;
+
+}
+
+.journey__header p{
+color:var(--text-light);
+line-height:1.8;
+
+}
+
+.timeline{
+position:relative;
+display:flex;
+flex-direction:column;
+gap:50px;
+max-width:900px;
+margin:auto;
+
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:28px;
+top:0;
+bottom:0;
+width:2px;
+background:linear-gradient(
+var(--primary),
+var(--accent)
+
+);
+
+opacity:.4;
+}
+
+.timeline__item{
+display:flex;
+gap:35px;
+align-items:flex-start;
+
+}
+
+.timeline__dot{
+width:58px;
+height:58px;
+border-radius:50%;
+background:linear-gradient(
+135deg,
+
+var(--primary),
+var(--accent)
+
+);
+
+flex-shrink:0;
+box-shadow:
+0 0 30px rgba(79,70,229,.5);
+
+}
+
+.timeline__card{
+padding:35px;
+width:100%;
+transition:.4s;
+
+}
+
+.timeline__card:hover{
+transform:translateY(-8px);
+
+}
+
+.timeline__card span{
+display:inline-block;
+margin-bottom:10px;
+color:var(--accent);
+font-weight:600;
+letter-spacing:.08em;
+
+}
+
+.timeline__card h4{
+font-size:1.4rem;
+margin-bottom:15px;
+
+}
+
+.timeline__card p{
+color:var(--text-light);
+line-height:1.8;
+
+}

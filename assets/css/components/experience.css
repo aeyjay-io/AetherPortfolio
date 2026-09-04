@@ -1,0 +1,648 @@
+/* ======================================
+   EXPERIENCE SECTION
+   AetherPortfolio
+   Premium / Lightweight
+   ====================================== */
+
+.experience {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    width: min(720px, 95vw);
+    height: 360px;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse, rgba(91, 140, 255, 0.11), transparent 68%);
+    filter: blur(12px);
+    pointer-events: none;
+}
+
+
+/* ======================================
+   EXPERIENCE CONTAINER
+   ====================================== */
+
+.experience__container {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ======================================
+   SECTION HEADER
+   ====================================== */
+
+.experience__header {
+    max-width: 800px;
+    margin: 0 auto 82px;
+    text-align: center;
+}
+
+.experience__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding: 11px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.experience__eyebrow span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 14px currentColor;
+}
+
+.experience__title {
+    margin: 0 0 24px;
+    font-family: var(--heading);
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+}
+
+.experience__title span {
+    display: block;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience__description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+
+/* ======================================
+   EXPERIENCE TIMELINE
+   ====================================== */
+
+.experience__timeline {
+    position: relative;
+    width: 100%;
+}
+
+
+/* ======================================
+   EXPERIENCE CARD
+   ====================================== */
+
+.experience-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 28px;
+
+    width: 100%;
+}
+
+
+/* ======================================
+   TIMELINE
+   ====================================== */
+
+.experience-card__timeline {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.experience-card__dot {
+    position: relative;
+    z-index: 2;
+
+    width: 14px;
+    height: 14px;
+
+    margin-top: 34px;
+
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    background: var(--bg-primary, #0b0b0f);
+
+    box-shadow:
+        0 0 0 5px rgba(255, 255, 255, 0.035);
+}
+
+.experience-card__dot::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 3px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+    opacity: 0.7;
+}
+
+.experience-card__line {
+    position: absolute;
+
+    top: 48px;
+    bottom: 0;
+
+    width: 1px;
+
+    background: currentColor;
+    opacity: 0.12;
+}
+
+
+/* ======================================
+   EXPERIENCE CONTENT
+   ====================================== */
+
+.experience-card__content {
+    position: relative;
+
+    padding: 34px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+/* ======================================
+   GRADIENT OVERLAY (Like Skill Category)
+   ====================================== */
+
+.experience-card__content::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 140, 255, 0.10),
+            transparent,
+            rgba(25, 211, 218, 0.08)
+        );
+
+    opacity: 0;
+
+    transition: 0.45s;
+
+    pointer-events: none;
+}
+
+/* ======================================
+   SHIMMER EFFECT (Like Skill Category)
+   ====================================== */
+
+.experience-card__content::before {
+    content: "";
+
+    position: absolute;
+
+    left: -120%;
+
+    top: 0;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.12),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 1s;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.experience-card__content:hover::before {
+    left: 150%;
+}
+
+/* ======================================
+   SUBTLE CARD ACCENT
+   ====================================== */
+
+.card-accent {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: currentColor;
+
+    opacity: 0.18;
+
+    z-index: 2;
+}
+
+
+/* ======================================
+   EXPERIENCE TOP
+   ====================================== */
+
+.experience-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.experience-card__type {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+
+    transition: 0.35s;
+}
+
+.experience-card__role {
+    margin: 0;
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    line-height: 1.2;
+    font-weight: 700;
+
+    transition: 0.35s;
+}
+
+.experience-card__company {
+    margin: 8px 0 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    opacity: 0.65;
+
+    transition: 0.35s;
+}
+
+.experience-card__date {
+    flex-shrink: 0;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    opacity: 0.7;
+
+    transition: all 0.35s ease;
+}
+
+.experience-card__content:hover .experience-card__date {
+    transform: translateY(-2px);
+
+    border-color: rgba(91, 140, 255, 0.4);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 140, 255, 0.25),
+            rgba(25, 211, 218, 0.18)
+        );
+
+    opacity: 1;
+}
+
+
+/* ======================================
+   OVERVIEW
+   ====================================== */
+
+.experience-card__overview {
+    display: grid;
+    gap: 12px;
+
+    max-width: 850px;
+
+    margin-bottom: 32px;
+}
+
+.experience-card__overview p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    opacity: 0.72;
+
+    transition: 0.35s;
+}
+
+
+/* ======================================
+   DETAILS
+   ====================================== */
+
+.experience-card__details {
+    margin-bottom: 32px;
+}
+
+.experience-card__details h5,
+.experience-card__skills h5 {
+    margin: 0 0 14px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    opacity: 0.75;
+}
+
+.experience-card__details ul {
+    display: grid;
+    gap: 10px;
+
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-card__details li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    opacity: 0.7;
+}
+
+
+/* ======================================
+   EXPERIENCE SKILLS / TAGS
+   ====================================== */
+
+.experience-card__skills {
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.experience-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.experience-card__tags span {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 32px;
+
+    padding: 6px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    font-size: 0.75rem;
+
+    opacity: 0.75;
+
+    transition: all 0.35s ease;
+}
+
+.experience-card__tags span:hover {
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 140, 255, 0.25),
+            rgba(25, 211, 218, 0.18)
+        );
+
+    border-color: rgba(91, 140, 255, 0.4);
+
+    box-shadow:
+        0 10px 30px
+        rgba(91, 140, 255, 0.20);
+
+    opacity: 1;
+}
+
+
+/* ======================================
+   CARD HOVER
+   Enhanced (Like Skill Category)
+   ====================================== */
+
+.experience-card__content:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: rgba(91, 140, 255, 0.35);
+
+    box-shadow:
+        0 30px 70px
+        rgba(91, 140, 255, 0.18);
+}
+
+.experience-card__content:hover::after {
+    opacity: 1;
+}
+
+.experience-card__content:hover .experience-card__type {
+    color: var(--accent);
+}
+
+.experience-card__content:hover .experience-card__role {
+    color: var(--accent);
+}
+
+.experience-card__content:hover .experience-card__company {
+    color: white;
+}
+
+.experience-card__content:hover .experience-card__overview p {
+    color: white;
+}
+
+
+/* ======================================
+   RESPONSIVE
+   ====================================== */
+
+@media (max-width: 768px) {
+
+    .experience {
+        padding: 90px 0;
+    }
+
+    .experience__header {
+        margin-bottom: 50px;
+    }
+
+    .experience-card {
+        grid-template-columns: 28px 1fr;
+        gap: 18px;
+    }
+
+    .experience-card__content {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .experience-card__top {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .experience-card__date {
+        align-self: flex-start;
+    }
+
+    .experience-card__dot {
+        width: 12px;
+        height: 12px;
+
+        margin-top: 28px;
+    }
+
+    .experience-card__dot::after {
+        inset: 2px;
+    }
+
+    .experience-card__line {
+        top: 40px;
+    }
+}
+
+
+/* ======================================
+   SMALL MOBILE
+   ====================================== */
+
+@media (max-width: 480px) {
+
+    .experience__container {
+        width: min(94%, 1100px);
+    }
+
+    .experience__eyebrow {
+        margin-bottom: 22px;
+        padding: 10px 15px;
+        font-size: 0.68rem;
+    }
+
+    .experience__title {
+        margin-bottom: 18px;
+        font-size: 2.25rem;
+    }
+
+    .experience__description {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .experience-card {
+        grid-template-columns: 20px 1fr;
+        gap: 12px;
+    }
+
+    .experience-card__content {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .experience-card__role {
+        font-size: 1.3rem;
+    }
+
+    .experience-card__company {
+        font-size: 0.9rem;
+    }
+
+    .experience-card__overview p,
+    .experience-card__details li {
+        font-size: 0.85rem;
+    }
+
+    .experience-card__dot {
+        width: 10px;
+        height: 10px;
+
+        margin-top: 24px;
+    }
+
+    .experience-card__dot::after {
+        inset: 2px;
+    }
+
+    .experience-card__line {
+        top: 34px;
+    }
+}

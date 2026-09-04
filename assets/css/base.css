@@ -1,0 +1,75 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--body);
+    color:var(--text);
+    background:
+        radial-gradient(circle at top left,#4F46E520,transparent 30%),
+        radial-gradient(circle at bottom right,#06B6D420,transparent 35%),
+        var(--background);
+
+    min-height:100svh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Aurora Layer */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(circle,#5B8CFF22 0%,transparent 45%),
+
+    radial-gradient(circle,#7B61FF22 0%,transparent 40%),
+
+    radial-gradient(circle,#19D3DA22 0%,transparent 45%);
+
+    filter:blur(24px);
+    will-change:opacity;
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    opacity:.4;
+
+    z-index:-1;
+
+}

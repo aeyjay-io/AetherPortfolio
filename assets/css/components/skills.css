@@ -1,0 +1,441 @@
+/*==================================
+SKILLS
+==================================*/
+
+.skills{
+    padding-top:140px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    align-items:stretch;
+}
+.skill-category{
+
+    display:flex;
+    flex-direction:column;
+
+    padding:30px;
+
+    min-height:430px;
+
+}
+
+.skill-category:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(255,255,255,.18);
+
+}
+
+.skill-category h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:25px;
+
+}
+
+.skill-card{
+
+    display:flex;
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.skill-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.skill-tags span{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:all .35s ease;
+
+font-size:.9rem;
+
+font-weight:500;
+
+cursor:default;
+
+}
+
+.skill-tags span:hover{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(91,140,255,.25),
+
+rgba(25,211,218,.18)
+
+);
+
+border-color:
+
+rgba(91,140,255,.4);
+
+transform:
+
+translateY(-4px);
+
+box-shadow:
+
+0 10px 30px
+
+rgba(91,140,255,.20);
+
+}
+
+.skill-icon{
+
+width:70px;
+
+height:70px;
+
+display:grid;
+
+place-items:center;
+
+font-size:2rem;
+
+border-radius:20px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(91,140,255,.18),
+
+rgba(25,211,218,.18)
+
+);
+
+margin-bottom:24px;
+
+transition:.45s;
+
+}
+.skill-category:hover .skill-icon{
+
+transform:
+
+translateY(-8px)
+
+rotate(-8deg)
+
+scale(1.08);
+
+box-shadow:
+
+0 18px 45px
+
+rgba(91,140,255,.25);
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(91,140,255,.30),
+
+rgba(25,211,218,.25)
+
+);
+
+}
+
+.skill-category::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.12),
+
+transparent
+
+);
+
+transform:skewX(-20deg);
+
+transition:1s;
+
+pointer-events:none;
+
+}
+
+.skill-category:hover::after{
+
+left:150%;
+
+}
+
+.skill-description{
+
+margin-bottom:24px;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+font-size:.95rem;
+
+min-height:95px;
+
+}
+/*=========================
+    SKILL STATUS
+=========================*/
+
+.skill-status{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+font-size:.82rem;
+
+font-weight:600;
+
+margin:12px 0 18px;
+
+width:max-content;
+
+}
+
+.skill-status.primary{
+
+background:rgba(59,130,246,.15);
+
+color:#60A5FA;
+
+}
+
+.skill-status.learning{
+
+background:rgba(14,165,233,.15);
+
+color:#38BDF8;
+
+}
+
+.skill-status.ai{
+
+background:rgba(168,85,247,.15);
+
+color:#C084FC;
+
+}
+
+.skill-status.remote{
+
+background:rgba(34,197,94,.15);
+
+color:#6EE7B7;
+
+}
+
+.skill-status.qa{
+
+background:rgba(249,115,22,.15);
+
+color:#FDBA74;
+
+}
+
+.skill-status.tools{
+
+background:rgba(250,204,21,.15);
+
+color:#FACC15;
+
+}
+.skill-category{
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s ease;
+
+}
+
+.skill-category::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(91,140,255,.10),
+
+transparent,
+
+rgba(25,211,218,.08)
+
+);
+
+opacity:0;
+
+transition:.45s;
+
+pointer-events:none;
+
+}
+
+.skill-category:hover{
+
+transform:
+
+translateY(-10px)
+
+scale(1.02);
+
+border-color:rgba(91,140,255,.35);
+
+box-shadow:
+
+0 30px 70px
+
+rgba(91,140,255,.18);
+
+}
+
+.skill-category:hover::before{
+
+opacity:1;
+
+}
+/*==================================
+SKILL FOOTER fix and make it equal 
+==================================*/
+.skill-footer{ 
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.skill-footer span:last-child{
+
+transition:.35s;
+
+}
+
+.skill-category:hover .skill-footer span:last-child{
+
+transform:
+
+translateX(10px);
+
+color:var(--accent);
+
+}
+
+.skill-footer{
+
+transition:.35s;
+
+}
+
+.skill-category:hover .skill-footer{
+
+color:white;
+
+}
+
+.skill-category h3{
+
+transition:.35s;
+
+}
+
+.skill-category:hover h3{
+
+color:var(--accent);
+
+}
+
+.skill-description{
+
+transition:.35s;
+
+}
+
+.skill-category:hover .skill-description{
+
+color:white;
+
+}
+
+.skill-category{
+
+cursor:pointer;
+
+}
