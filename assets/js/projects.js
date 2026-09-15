@@ -383,7 +383,12 @@ nextBtn.addEventListener("click", () => {
 });
 
 projectSecondaryButton.addEventListener("click", () => {
-    sourceCodeModal.classList.add("active");
+    const currentProjectData = projects[currentProject];
+    if (currentProjectData.buttons.sourceCode && currentProjectData.buttons.sourceCode !== "#") {
+        window.open(currentProjectData.buttons.sourceCode, '_blank');
+    } else {
+        sourceCodeModal.classList.add("active");
+    }
 });
 
 closeSourceCode.addEventListener("click", () => {

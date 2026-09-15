@@ -22,7 +22,7 @@ const projects = [
 
     buttons:{
         caseStudy:"#",
-        sourceCode:"#"
+        sourceCode:"https://github.com/aeyjay-io/GLA.git"
     },
 
 preview:{
@@ -245,7 +245,7 @@ future:
 
     buttons:{
         caseStudy:"#",
-        sourceCode:"#"
+        sourceCode:"https://github.com/aeyjay-io/AetherPortfolio.git"
     },
 
 preview:{
