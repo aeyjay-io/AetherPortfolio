@@ -154,7 +154,7 @@ AI-powered tools, and helping businesses improve their digital workflows.
              class="secondary-btn"
              id="open-resume">
 
-            Download Resume
+            View Resume
 
         </a>
 
